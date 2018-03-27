@@ -14,7 +14,7 @@ function getDataFromApi (searchTerm, callback) {
 }
 
 function renderResults (item) {
-	return `<div>
+	return `<div title="There are 10 videos loaded">
 				<a class="js-videoReturnTitle" href="https://www.youtube.com/watch?v=${item.id.videoId}" target="blank_">${item.snippet.title}</a> Video:
 				<iframe title="${item.snippet.title}" type="text/html"class="js-videoReturnVideoId" src="https://www.youtube.com/embed/${item.id.videoId}" target="blank_" width="240" height="160"><img src="${item.snippet.thumbnails.default.url}"></iframe>
 				<p>Check out related videos here:<a class="js-relatedVideos" href="https://www.youtube.com/watch?v=${item.id.videoId}&list=${item.snippet.channelId}">Click Here For More</a></p>
